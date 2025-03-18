@@ -56,3 +56,50 @@ export const useSequentialFadeIn = (
     };
   }, [elementClass, baseDelay]);
 };
+
+// Custom styles for the React Flow diagram
+export const applyFlowStyles = () => {
+  useEffect(() => {
+    // Add custom styles to the document head for React Flow
+    const styleElement = document.createElement('style');
+    styleElement.textContent = `
+      .interactive-mindmap .react-flow__node {
+        transition: transform 0.3s ease, opacity 0.3s ease !important;
+        opacity: 0;
+      }
+      
+      .interactive-mindmap .react-flow__node.animated {
+        opacity: 1;
+      }
+      
+      .interactive-mindmap .react-flow__edge path {
+        stroke-width: 2;
+      }
+      
+      .interactive-mindmap .react-flow__node:hover {
+        filter: drop-shadow(0 0 8px rgba(4, 150, 255, 0.5));
+      }
+      
+      .interactive-mindmap .react-flow__controls {
+        bottom: 10px;
+        right: 10px;
+        left: auto;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+      }
+      
+      .interactive-mindmap .react-flow__minimap {
+        bottom: 10px;
+        left: 10px;
+        border-radius: 4px;
+        overflow: hidden;
+        opacity: 0.8;
+      }
+    `;
+    
+    document.head.appendChild(styleElement);
+    
+    return () => {
+      document.head.removeChild(styleElement);
+    };
+  }, []);
+};
