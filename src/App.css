@@ -48,7 +48,14 @@
   transition: all 0.3s ease;
 }
 
-.btn-gradient:hover {
+.btn-gradient-dark {
+  background: linear-gradient(45deg, #0454FF, #3350FE);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover,
+.btn-gradient-dark:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px -5px rgba(83, 109, 254, 0.4);
 }
@@ -83,4 +90,10 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.breathing-gradient-dark {
+  background: linear-gradient(-45deg, #171923, #1E2533, #192230, #1A1F2C);
+  background-size: 400% 400%;
+  animation: gradient-breathe 15s ease infinite;
 }
