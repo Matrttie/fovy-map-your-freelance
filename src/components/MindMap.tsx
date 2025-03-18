@@ -14,7 +14,7 @@ export const MindMap: React.FC = () => {
   };
 
   return (
-    <div className="mind-map-container bg-gradient-to-br from-[#081b29] to-[#0b2233] rounded-3xl overflow-hidden shadow-xl">
+    <div className="mind-map-container bg-gradient-to-br from-[#0a1c6b] to-[#0e2380] rounded-3xl overflow-hidden shadow-xl">
       <InteractiveMindMap 
         expandedNodes={expandedNodes}
         onNodeClick={handleNodeClick}
