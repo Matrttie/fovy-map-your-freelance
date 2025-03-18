@@ -1,10 +1,11 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 210 40% 98%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -13,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 210 100% 50%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -35,19 +36,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -97,5 +91,132 @@
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/60 backdrop-blur-md border border-white/20 shadow-sm;
+  }
+  
+  .feature-card {
+    @apply relative overflow-hidden rounded-2xl p-6 glass-card transition-all duration-300 ease-in-out;
+  }
+  
+  .feature-card:hover {
+    @apply shadow-md transform -translate-y-1;
+  }
+  
+  .nav-link {
+    @apply relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-fovy-blue after:transition-all after:duration-300 hover:after:w-full;
+  }
+  
+  .btn-primary {
+    @apply inline-flex h-12 items-center justify-center rounded-lg bg-fovy-blue px-6 text-sm font-medium text-white shadow-sm transition-colors hover:bg-fovy-blue/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-fovy-blue disabled:pointer-events-none disabled:opacity-50;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex h-12 items-center justify-center rounded-lg border border-input bg-background px-6 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-fovy-blue disabled:pointer-events-none disabled:opacity-50;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .container-tight {
+    @apply mx-auto max-w-5xl px-4 md:px-6;
+  }
+  
+  .heading-xl {
+    @apply text-4xl font-bold leading-tight md:text-5xl lg:text-6xl;
+  }
+  
+  .heading-lg {
+    @apply text-3xl font-bold leading-tight md:text-4xl;
+  }
+  
+  .heading-md {
+    @apply text-2xl font-bold leading-tight md:text-3xl;
+  }
+  
+  .blur-circle {
+    @apply absolute rounded-full bg-gradient-radial opacity-60 blur-3xl;
+  }
+}
+
+/* Animation classes */
+.stagger-item {
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
+.stagger-in .stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.stagger-in .stagger-item:nth-child(2) { animation-delay: 0.2s; }
+.stagger-in .stagger-item:nth-child(3) { animation-delay: 0.3s; }
+.stagger-in .stagger-item:nth-child(4) { animation-delay: 0.4s; }
+.stagger-in .stagger-item:nth-child(5) { animation-delay: 0.5s; }
+
+/* Mind map styles */
+.mind-map-container {
+  position: relative;
+}
+
+.mind-map-node {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mind-map-node:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.mind-map-connection {
+  stroke: #e2e8f0;
+  stroke-width: 2;
+  transition: stroke 0.3s ease;
+}
+
+.mind-map-connection:hover {
+  stroke: #0496FF;
+}
+
+/* AI Chat styles */
+.chat-bubble {
+  @apply relative my-2 max-w-[85%] rounded-2xl px-4 py-2;
+  animation: chat-bubble-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.chat-bubble.user {
+  @apply ml-auto bg-fovy-blue text-white;
+  border-bottom-right-radius: 0;
+}
+
+.chat-bubble.ai {
+  @apply mr-auto bg-gray-100 text-gray-800;
+  border-bottom-left-radius: 0;
+}
+
+@keyframes chat-bubble-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Background elements */
+.background-gradient {
+  background: linear-gradient(
+    to bottom right,
+    rgba(226, 232, 240, 0.6) 0%,
+    rgba(226, 232, 240, 0) 50%
+  );
 }
