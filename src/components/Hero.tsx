@@ -31,6 +31,12 @@ export const Hero: React.FC = () => {
 
   return (
     <section className="relative overflow-hidden py-20 md:py-32">
+      {/* Abstract Breathing Animation Background */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="abstract-blob w-[80%] h-[80%] md:w-[60%] md:h-[60%] opacity-80"></div>
+      </div>
+      
+      {/* Background gradient elements */}
       <div className="absolute top-[25%] left-[15%] w-96 h-96 rounded-full bg-gradient-to-br from-blue-100/40 to-blue-200/30 blur-3xl random-breathing-1"></div>
       <div className="absolute bottom-[15%] right-[25%] w-[500px] h-[500px] rounded-full bg-gradient-to-tl from-indigo-100/30 to-purple-100/20 blur-3xl random-breathing-2"></div>
       
@@ -81,17 +87,22 @@ export const Hero: React.FC = () => {
           </div>
           <div className="stagger-item animate-scale-in relative hidden lg:flex items-center justify-center">
             <div className="relative w-full max-w-[500px] glass-card p-6 rounded-3xl shadow-xl bg-gradient-to-br from-white/30 to-blue-50/20 backdrop-blur-md border border-white/50 random-breathing-1">
-              <img 
-                src="/lovable-uploads/1227a1eb-6075-4c9d-9144-d4b0a14b66a2.png" 
-                alt="FOVY Logo" 
-                className="w-full h-auto object-contain rounded-2xl"
-              />
-              
-              <div className="absolute -top-8 -left-10 w-24 h-24 rounded-full bg-gradient-to-br from-blue-100/40 to-indigo-100/30 backdrop-blur-sm border border-white/50 random-float-2"></div>
-              <div className="absolute -bottom-12 -right-6 w-28 h-28 rounded-full bg-gradient-to-tl from-indigo-100/40 to-purple-100/30 backdrop-blur-sm border border-white/50 random-float-1"></div>
+              {/* Abstract animation as the primary visual */}
+              <div className="w-full h-full min-h-[300px] flex items-center justify-center rounded-2xl overflow-hidden">
+                <div className="abstract-blob-inner w-[90%] h-[90%] opacity-90"></div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Logo in bottom-left corner */}
+      <div className="absolute bottom-8 left-8 z-20 w-24 h-24 flex items-center justify-center">
+        <img 
+          src="/lovable-uploads/1227a1eb-6075-4c9d-9144-d4b0a14b66a2.png" 
+          alt="FOVY Logo" 
+          className="w-full h-auto object-contain drop-shadow-lg gentle-float"
+        />
       </div>
     </section>
   );
