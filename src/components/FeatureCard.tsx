@@ -34,10 +34,12 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
         <p className="text-slate-600">{description}</p>
       </div>
       
-      {/* Enhanced decorative elements with larger, gentler movements and lighter gradients */}
-      <div className="absolute -bottom-4 -right-4 w-16 h-16 rounded-full bg-gradient-to-br from-blue-100/80 to-indigo-200/60 backdrop-blur-sm border border-white/40 gentle-float"></div>
-      <div className="absolute top-1/2 right-4 w-3 h-3 rounded-full bg-blue-200/70 large-gentle-float"></div>
-      <div className="absolute bottom-1/4 left-4 w-5 h-5 rounded-full bg-indigo-200/70 large-gentle-float-reverse"></div>
+      {/* Random bubble decorations with varied sizes, positions and animations */}
+      <div className="absolute -bottom-8 -right-8 w-20 h-20 rounded-full bg-gradient-to-br from-blue-100/70 to-indigo-200/60 backdrop-blur-sm border border-white/40 random-float-1"></div>
+      <div className="absolute top-1/4 right-6 w-4 h-4 rounded-full bg-blue-200/60 random-float-2"></div>
+      <div className="absolute bottom-1/3 left-5 w-6 h-6 rounded-full bg-indigo-200/60 random-float-3"></div>
+      <div className="absolute top-10 left-1/2 w-3 h-3 rounded-full bg-blue-100/60 random-float-4"></div>
+      <div className="absolute top-3/4 right-1/3 w-5 h-5 rounded-full bg-indigo-100/60 random-float-5"></div>
     </div>
   );
 };

@@ -211,110 +211,147 @@
 .stagger-in .stagger-item:nth-child(4) { animation-delay: 0.4s; }
 .stagger-in .stagger-item:nth-child(5) { animation-delay: 0.5s; }
 
-/* New gentler animations with larger movements */
-.gentle-breathing {
-  animation: gentle-breathe 12s ease-in-out infinite;
+/* New random animations with different timings, sizes, and movements */
+.random-breathing-1 {
+  animation: random-breathe-1 22s ease-in-out infinite;
 }
 
-.large-gentle-breathing {
-  animation: large-gentle-breathe 18s ease-in-out infinite;
+.random-breathing-2 {
+  animation: random-breathe-2 28s ease-in-out infinite;
 }
 
-.large-gentle-breathing-slow {
-  animation: large-gentle-breathe 24s ease-in-out infinite;
-}
-
-@keyframes gentle-breathe {
+@keyframes random-breathe-1 {
   0%, 100% {
-    transform: scale(1);
-    opacity: 0.5;
-  }
-  50% {
-    transform: scale(1.03);
-    opacity: 0.7;
-  }
-}
-
-@keyframes large-gentle-breathe {
-  0%, 100% {
-    transform: scale(1);
+    transform: scale(1) translate(0, 0);
     opacity: 0.4;
   }
-  50% {
-    transform: scale(1.08);
+  33% {
+    transform: scale(1.12) translate(15px, -10px);
     opacity: 0.6;
   }
-}
-
-.gentle-pulse {
-  animation: gentle-pulse 6s ease-in-out infinite;
-}
-
-@keyframes gentle-pulse {
-  0% {
-    box-shadow: 0 0 8px rgba(4, 150, 255, 0.1);
-    transform: scale(1);
-  }
-  50% {
-    box-shadow: 0 0 16px rgba(4, 150, 255, 0.2);
-    transform: scale(1.02);
-  }
-  100% {
-    box-shadow: 0 0 8px rgba(4, 150, 255, 0.1);
-    transform: scale(1);
+  66% {
+    transform: scale(1.05) translate(-15px, 10px);
+    opacity: 0.5;
   }
 }
 
-.large-gentle-float {
-  animation: large-gentle-float 12s ease-in-out infinite;
-}
-
-.large-gentle-float-reverse {
-  animation: large-gentle-float-reverse 15s ease-in-out infinite;
-}
-
-.large-gentle-float-slow {
-  animation: large-gentle-float 20s ease-in-out infinite;
-}
-
-@keyframes large-gentle-float {
+@keyframes random-breathe-2 {
   0%, 100% {
-    transform: translateY(0);
+    transform: scale(1) translate(0, 0);
+    opacity: 0.3;
   }
-  50% {
-    transform: translateY(20px);
+  40% {
+    transform: scale(1.15) translate(-20px, 10px);
+    opacity: 0.5;
   }
-}
-
-@keyframes large-gentle-float-reverse {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
+  70% {
+    transform: scale(1.08) translate(20px, -15px);
+    opacity: 0.4;
   }
 }
 
-.gentle-float {
-  animation: gentle-float 8s ease-in-out infinite;
+/* Random floating animations for bubbles with different paths */
+.random-float-1 {
+  animation: random-float-1 18s ease-in-out infinite;
 }
 
-.gentle-float-slow {
-  animation: gentle-float 12s ease-in-out infinite;
+.random-float-2 {
+  animation: random-float-2 25s ease-in-out infinite;
 }
 
-@keyframes gentle-float {
+.random-float-3 {
+  animation: random-float-3 22s ease-in-out infinite;
+}
+
+.random-float-4 {
+  animation: random-float-4 20s ease-in-out infinite;
+}
+
+.random-float-5 {
+  animation: random-float-5 23s ease-in-out infinite;
+}
+
+@keyframes random-float-1 {
   0%, 100% {
     transform: translate(0, 0);
   }
   25% {
-    transform: translate(5px, -5px);
+    transform: translate(15px, -20px);
   }
   50% {
-    transform: translate(0, -8px);
+    transform: translate(-10px, -30px);
   }
   75% {
-    transform: translate(-5px, -5px);
+    transform: translate(-20px, -10px);
+  }
+}
+
+@keyframes random-float-2 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(-12px, -25px);
+  }
+  60% {
+    transform: translate(18px, -15px);
+  }
+  80% {
+    transform: translate(10px, -30px);
+  }
+}
+
+@keyframes random-float-3 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(20px, -20px);
+  }
+  40% {
+    transform: translate(25px, 10px);
+  }
+  70% {
+    transform: translate(-15px, -15px);
+  }
+  90% {
+    transform: translate(-10px, 12px);
+  }
+}
+
+@keyframes random-float-4 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-15px, 10px);
+  }
+  45% {
+    transform: translate(10px, 15px);
+  }
+  65% {
+    transform: translate(15px, -5px);
+  }
+  85% {
+    transform: translate(-10px, -10px);
+  }
+}
+
+@keyframes random-float-5 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  15% {
+    transform: translate(8px, -12px);
+  }
+  35% {
+    transform: translate(-15px, -8px);
+  }
+  60% {
+    transform: translate(12px, 15px);
+  }
+  80% {
+    transform: translate(-8px, 10px);
   }
 }
 

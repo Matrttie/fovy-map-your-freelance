@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Brain, Sparkles, MessageSquare } from 'lucide-react';
@@ -31,10 +30,10 @@ export const Hero: React.FC = () => {
 
   return (
     <section className="relative overflow-hidden py-20 md:py-32">
-      {/* Enhanced abstract shapes with larger, gentler animations and lighter colors */}
-      <div className="absolute top-20 left-10 w-80 h-80 rounded-full bg-gradient-to-br from-blue-100/50 to-blue-200/40 blur-3xl large-gentle-breathing"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-gradient-to-tl from-indigo-100/40 to-purple-100/30 blur-3xl large-gentle-breathing-slow"></div>
-      <div className="absolute top-1/3 right-1/4 w-64 h-64 rounded-full bg-gradient-to-br from-blue-50/30 to-indigo-100/30 blur-3xl large-gentle-float"></div>
+      <div className="absolute top-[25%] left-[15%] w-80 h-80 rounded-full bg-gradient-to-br from-blue-100/50 to-blue-200/40 blur-3xl random-breathing-1"></div>
+      <div className="absolute bottom-[15%] right-[25%] w-96 h-96 rounded-full bg-gradient-to-tl from-indigo-100/40 to-purple-100/30 blur-3xl random-breathing-2"></div>
+      <div className="absolute top-[45%] right-[35%] w-64 h-64 rounded-full bg-gradient-to-br from-blue-50/30 to-indigo-100/30 blur-3xl random-float-3"></div>
+      <div className="absolute bottom-[35%] left-[20%] w-72 h-72 rounded-full bg-gradient-to-tl from-purple-50/30 to-blue-100/30 blur-3xl random-float-1"></div>
       
       <div className="container px-4 md:px-6 relative z-10" ref={containerRef}>
         <div className="grid gap-12 lg:grid-cols-[1fr,1fr] lg:gap-8">
@@ -82,21 +81,21 @@ export const Hero: React.FC = () => {
             </div>
           </div>
           <div className="stagger-item animate-scale-in relative hidden lg:flex items-center justify-center">
-            <div className="relative w-full max-w-[500px] glass-card p-6 rounded-3xl shadow-xl bg-gradient-to-br from-white/30 to-blue-50/20 backdrop-blur-md border border-white/50 large-gentle-breathing-slow">
+            <div className="relative w-full max-w-[500px] glass-card p-6 rounded-3xl shadow-xl bg-gradient-to-br from-white/30 to-blue-50/20 backdrop-blur-md border border-white/50 random-breathing-1">
               <img 
                 src="/lovable-uploads/316d1b63-283e-498c-88ad-8a3ba32b5578.png" 
                 alt="FOVY App UI" 
                 className="w-full h-auto object-contain rounded-2xl"
               />
               
-              {/* Enhanced decorative elements with larger, gentler animations and lighter gradients */}
-              <div className="absolute -top-5 -left-5 w-16 h-16 rounded-full bg-gradient-to-br from-blue-100/50 to-indigo-100/40 backdrop-blur-sm border border-white/50 large-gentle-float"></div>
-              <div className="absolute -bottom-8 -right-8 w-20 h-20 rounded-full bg-gradient-to-tl from-indigo-100/50 to-purple-100/40 backdrop-blur-sm border border-white/50 large-gentle-float-reverse"></div>
-              <div className="absolute top-1/2 -right-4 w-10 h-10 rounded-full bg-gradient-to-br from-blue-50/50 to-white/30 backdrop-blur-sm border border-white/50 gentle-pulse"></div>
+              <div className="absolute -top-8 -left-10 w-20 h-20 rounded-full bg-gradient-to-br from-blue-100/50 to-indigo-100/40 backdrop-blur-sm border border-white/50 random-float-2"></div>
+              <div className="absolute -bottom-12 -right-6 w-24 h-24 rounded-full bg-gradient-to-tl from-indigo-100/50 to-purple-100/40 backdrop-blur-sm border border-white/50 random-float-1"></div>
+              <div className="absolute top-1/2 -right-8 w-16 h-16 rounded-full bg-gradient-to-br from-blue-50/50 to-white/30 backdrop-blur-sm border border-white/50 random-float-4"></div>
               
-              {/* Add bubble element from reference image */}
-              <div className="absolute -bottom-10 left-10 w-24 h-24 rounded-full bg-blue-200/40 blur-xl large-gentle-float"></div>
-              <div className="absolute top-10 right-10 w-16 h-16 rounded-full bg-blue-200/40 blur-xl large-gentle-float-reverse"></div>
+              <div className="absolute -bottom-6 left-1/4 w-14 h-14 rounded-full bg-blue-200/40 blur-xl random-float-3"></div>
+              <div className="absolute top-1/3 right-5 w-10 h-10 rounded-full bg-blue-200/40 blur-xl random-float-5"></div>
+              <div className="absolute bottom-1/4 left-10 w-12 h-12 rounded-full bg-indigo-200/40 blur-xl random-float-2"></div>
+              <div className="absolute top-10 left-1/3 w-8 h-8 rounded-full bg-purple-200/40 blur-xl random-float-4"></div>
             </div>
           </div>
         </div>
