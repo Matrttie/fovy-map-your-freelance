@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
                 <span className="text-blue-500">Map</span> your career<br />with AI
               </h1>
               <p className="stagger-item animate-fade-in mt-4 max-w-[600px] text-lg text-gray-600">
-                FOVY helps freelancers visualize skills, enhance client communication, and build career confidence through AI-driven mind mapping.
+                FOVY helps freelancers visualize skills, enhance client communication, and build career confidence through AI-driven career mapping.
               </p>
             </div>
             <div className="stagger-item flex animate-fade-in flex-col gap-4 sm:flex-row">
