@@ -74,7 +74,7 @@ const Index = () => {
               All the tools you need to <span className="text-fovy-blue">succeed</span>
             </h2>
             <p className="mt-4 text-muted-foreground mx-auto max-w-[700px] stagger-item animate-fade-in">
-              FOVY provides freelancers with a complete suite of AI-powered tools designed to enhance career visibility, improve client communications, and boost confidence.
+              FOVY provides freelancers with a complete suite of <span className="text-fovy-blue">AI-powered tools</span> designed to enhance career visibility, improve client communications, and boost confidence.
             </p>
           </div>
           
@@ -137,7 +137,7 @@ const Index = () => {
                 Visualize your career like <span className="text-fovy-blue">never before</span>
               </h2>
               <p className="mt-4 text-muted-foreground stagger-item animate-fade-in">
-                Our AI-powered career mapping technology creates visual representations of your skills, experience, and achievements. Watch as your career landscape unfolds before you.
+                Our <span className="text-fovy-blue">AI-powered</span> career mapping technology creates visual representations of your skills, experience, and achievements. Watch as your career landscape unfolds before you.
               </p>
               
               <ul className="mt-6 space-y-3 stagger-item animate-fade-in">
@@ -179,7 +179,7 @@ const Index = () => {
                 Your personal confidence <span className="text-fovy-blue">companion</span>
               </h2>
               <p className="mt-4 text-muted-foreground stagger-item animate-fade-in">
-                AIR Minder provides gentle, personalized reminders and motivational insights to help you build confidence, reduce stress, and stay focused on your goals.
+                AIR Minder provides gentle, <span className="text-fovy-blue">personalized reminders</span> and motivational insights to help you build confidence, reduce stress, and stay focused on your goals.
               </p>
               
               <ul className="mt-6 space-y-3 stagger-item animate-fade-in">
@@ -225,7 +225,7 @@ const Index = () => {
               Make data-driven <span className="text-fovy-blue">career decisions</span>
             </h2>
             <p className="mt-4 text-muted-foreground mx-auto max-w-[700px] stagger-item animate-fade-in">
-              FOVY analyzes your skills and market trends to provide personalized recommendations for your career growth, learning paths, and new opportunities.
+              FOVY analyzes your skills and market trends to provide <span className="text-fovy-blue">personalized recommendations</span> for your career growth, learning paths, and new opportunities.
             </p>
           </div>
           

@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Brain, Sparkles, MessageSquare } from 'lucide-react';
@@ -42,7 +43,7 @@ export const Hero: React.FC = () => {
                 <span>AI-Powered Career Growth</span>
               </div>
               <h1 className="stagger-item animate-fade-in mt-4 text-5xl font-bold leading-tight md:text-6xl text-slate-800">
-                <span className="bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent">Map</span> your career<br />with AI
+                <span className="text-fovy-blue">Map</span> your career<br />with <span className="text-fovy-blue">AI</span>
               </h1>
               <p className="stagger-item animate-fade-in mt-4 max-w-[600px] text-lg text-slate-600">
                 FOVY helps freelancers visualize skills, enhance client communication, and build career confidence through AI-driven career mapping.
@@ -81,8 +82,8 @@ export const Hero: React.FC = () => {
           <div className="stagger-item animate-scale-in relative hidden lg:flex items-center justify-center">
             <div className="relative w-full max-w-[500px] glass-card p-6 rounded-3xl shadow-xl bg-gradient-to-br from-white/30 to-blue-50/20 backdrop-blur-md border border-white/50 random-breathing-1">
               <img 
-                src="/lovable-uploads/316d1b63-283e-498c-88ad-8a3ba32b5578.png" 
-                alt="FOVY App UI" 
+                src="/lovable-uploads/1227a1eb-6075-4c9d-9144-d4b0a14b66a2.png" 
+                alt="FOVY Logo" 
                 className="w-full h-auto object-contain rounded-2xl"
               />
               
