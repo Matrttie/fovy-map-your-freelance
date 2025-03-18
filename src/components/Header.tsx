@@ -67,7 +67,7 @@ export const Header: React.FC = () => {
             href="#career-insights"
             onClick={(e) => handleNavClick(e, 'career-insights')}
           >
-            Career Insights
+            Smart Matching
           </a>
         </nav>
         <div className="hidden md:flex items-center gap-4">
@@ -116,7 +116,7 @@ export const Header: React.FC = () => {
               href="#career-insights"
               onClick={(e) => handleNavClick(e, 'career-insights')}
             >
-              Career Insights
+              Smart Matching
             </a>
             <div className="flex flex-col gap-2 pt-4">
               <Button variant="outline" className="w-full">

@@ -211,7 +211,7 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Career Insights Section */}
+      {/* Smart Matching Section */}
       <section id="career-insights" className="section relative overflow-hidden">
         <div className="blur-circle from-fovy-blue/20 to-transparent h-[500px] w-[500px] -bottom-64 -right-64"></div>
         
@@ -219,7 +219,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center rounded-lg bg-fovy-lightblue px-3 py-1 text-sm font-medium text-fovy-blue stagger-item animate-fade-in">
               <TrendingUp className="mr-1 h-3.5 w-3.5" />
-              <span>Career Insights</span>
+              <span>Smart Matching</span>
             </div>
             <h2 className="heading-lg mt-4 stagger-item animate-fade-in">
               Make data-driven <span className="text-fovy-blue">career decisions</span>
@@ -262,7 +262,7 @@ const Index = () => {
             
             <div className="mt-8 text-center">
               <Button className="bg-fovy-blue hover:bg-fovy-blue/90">
-                Explore Career Insights
+                Explore Smart Matching
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
