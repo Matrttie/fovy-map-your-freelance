@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -21,19 +20,14 @@ export const Header: React.FC = () => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      // Close mobile menu if open
       setIsMobileMenuOpen(false);
     }
   };
 
   return (
-    <header
-      className={`sticky top-0 z-40 w-full transition-all duration-300 ${
-        isScrolled
-          ? 'bg-slate-900/70 shadow-sm backdrop-blur-lg'
-          : 'bg-transparent'
-      }`}
-    >
+    <header className={`sticky top-0 z-40 w-full transition-all duration-300 ${
+      isScrolled ? 'bg-slate-900/70 shadow-sm backdrop-blur-lg' : 'bg-transparent'
+    }`}>
       <div className="container flex h-20 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-2">
           <a href="/" className="flex items-center">
@@ -57,17 +51,17 @@ export const Header: React.FC = () => {
           </a>
           <a 
             className="nav-link-dark" 
+            href="#smart-matching"
+            onClick={(e) => handleNavClick(e, 'smart-matching')}
+          >
+            Smart Matching
+          </a>
+          <a 
+            className="nav-link-dark" 
             href="#air-minder"
             onClick={(e) => handleNavClick(e, 'air-minder')}
           >
             AIR Minder
-          </a>
-          <a 
-            className="nav-link-dark" 
-            href="#career-insights"
-            onClick={(e) => handleNavClick(e, 'career-insights')}
-          >
-            Smart Matching
           </a>
         </nav>
         <div className="hidden md:flex items-center gap-4">
@@ -106,17 +100,17 @@ export const Header: React.FC = () => {
             </a>
             <a
               className="flex items-center py-2 text-slate-300 hover:text-white"
+              href="#smart-matching"
+              onClick={(e) => handleNavClick(e, 'smart-matching')}
+            >
+              Smart Matching
+            </a>
+            <a
+              className="flex items-center py-2 text-slate-300 hover:text-white"
               href="#air-minder"
               onClick={(e) => handleNavClick(e, 'air-minder')}
             >
               AIR Minder
-            </a>
-            <a
-              className="flex items-center py-2 text-slate-300 hover:text-white"
-              href="#career-insights"
-              onClick={(e) => handleNavClick(e, 'career-insights')}
-            >
-              Smart Matching
             </a>
             <div className="flex flex-col gap-2 pt-4">
               <Button variant="outline" className="w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 text-slate-200 rounded-xl hover:bg-slate-700/50">
