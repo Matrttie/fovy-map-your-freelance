@@ -31,17 +31,17 @@ export const Hero: React.FC = () => {
 
   return (
     <section className="relative overflow-hidden py-20 md:py-32">
-      {/* Logo moved further into the corner */}
-      <div className="absolute top-4 left-4 z-20">
-        <img 
-          src="/lovable-uploads/ffc1bc93-8c95-4ffe-beef-a96c26d0eb14.png"
-          alt="FOVY Logo"
-          className="w-16 h-16 object-contain"
-        />
-      </div>
-      
       <div className="container px-4 md:px-6 relative z-10" ref={containerRef}>
         <div className="flex flex-col items-center text-center">
+          {/* Centered logo with margin bottom for spacing */}
+          <div className="mb-8">
+            <img 
+              src="/lovable-uploads/ffc1bc93-8c95-4ffe-beef-a96c26d0eb14.png"
+              alt="FOVY Logo"
+              className="w-20 h-20 object-contain"
+            />
+          </div>
+          
           <div className="flex flex-col justify-center items-center space-y-6 max-w-3xl mx-auto">
             <div>
               <div className="stagger-item inline-flex animate-fade-in items-center rounded-full bg-gradient-to-r from-white/90 to-blue-50/80 backdrop-blur-sm px-3 py-1 text-sm font-medium text-blue-500 shadow-md">
