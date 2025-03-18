@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { MainLayout } from '@/layouts/MainLayout';
 import { Hero } from '@/components/Hero';
@@ -11,11 +10,15 @@ import {
   Sparkles, 
   MessageSquare, 
   ChevronRight,
+  Users,
+  Search,
+  Link,
 } from 'lucide-react';
 
 const Index = () => {
   const featuresRef = useRef<HTMLDivElement>(null);
   const mindMapRef = useRef<HTMLDivElement>(null);
+  const matchingRef = useRef<HTMLDivElement>(null);
   const airMinderRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -32,14 +35,14 @@ const Index = () => {
       });
     }, observerOptions);
 
-    [featuresRef, mindMapRef, airMinderRef].forEach((ref) => {
+    [featuresRef, mindMapRef, matchingRef, airMinderRef].forEach((ref) => {
       if (ref.current) {
         observer.observe(ref.current);
       }
     });
 
     return () => {
-      [featuresRef, mindMapRef, airMinderRef].forEach((ref) => {
+      [featuresRef, mindMapRef, matchingRef, airMinderRef].forEach((ref) => {
         if (ref.current) {
           observer.unobserve(ref.current);
         }
@@ -112,6 +115,70 @@ const Index = () => {
         </div>
       </section>
       
+      {/* Smart Matching Section */}
+      <section id="smart-matching" className="section bg-slate-900/95">
+        <div className="container-tight" ref={matchingRef}>
+          <div className="grid gap-12 lg:grid-cols-2 items-center">
+            <div>
+              <h2 className="heading-md mb-6 text-white">
+                Smart <span className="text-blue-400">Matching</span>
+              </h2>
+              <p className="text-xl text-slate-300 mb-4">
+                Connect with the perfect opportunities using our AI-powered matching system.
+              </p>
+              <p className="text-lg text-slate-400 mb-8">
+                Our intelligent algorithm analyzes your skills, experience, and goals to find the most relevant opportunities and connections.
+              </p>
+              <div className="grid grid-cols-2 gap-6 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="p-2 rounded-lg bg-blue-500/10 border border-blue-500/20">
+                    <Users className="h-6 w-6 text-blue-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-white mb-1">Smart Network</h3>
+                    <p className="text-slate-400">Connect with relevant professionals</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="p-2 rounded-lg bg-blue-500/10 border border-blue-500/20">
+                    <Search className="h-6 w-6 text-blue-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-white mb-1">Precise Matches</h3>
+                    <p className="text-slate-400">Find exactly what you need</p>
+                  </div>
+                </div>
+              </div>
+              <Button className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-6 rounded-xl shadow-lg">
+                Start Matching
+                <ChevronRight className="ml-2 h-5 w-5" />
+              </Button>
+            </div>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl blur-3xl"></div>
+              <div className="relative bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 backdrop-blur-sm">
+                <div className="grid gap-6">
+                  {[1, 2, 3].map((i) => (
+                    <div key={i} className="flex items-center gap-4 p-4 bg-slate-800/80 rounded-xl border border-slate-700/50">
+                      <div className="h-12 w-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
+                        <Link className="h-6 w-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="h-2 w-24 bg-slate-600 rounded mb-2"></div>
+                        <div className="h-2 w-32 bg-slate-700 rounded"></div>
+                      </div>
+                      <div className="px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-400 text-sm">
+                        98% Match
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* AIR Minder Section */}
       <section id="air-minder" className="section bg-slate-900/90">
         <div className="container-tight" ref={airMinderRef}>
@@ -154,3 +221,4 @@ const Index = () => {
 };
 
 export default Index;
+
