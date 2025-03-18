@@ -22,9 +22,12 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   }, []);
   
   return (
-    <div className="flex min-h-screen flex-col bg-white text-gray-800">
+    <div className="flex min-h-screen flex-col bg-white text-gray-800 relative overflow-hidden">
+      {/* Dynamic gradient background effect */}
+      <div className="absolute inset-0 -z-10 breathing-gradient opacity-40"></div>
+      
       <Header />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 relative z-10">{children}</main>
       <Footer />
     </div>
   );
