@@ -63,22 +63,22 @@ const SkillNode = ({ data }: { data: any }) => {
     <Tooltip>
       <TooltipTrigger asChild>
         <div className="flex flex-col items-center justify-center p-2 relative node-container">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-fovy-blue mb-2 shadow-md">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#2e177b] mb-2 shadow-md">
             {data.icon}
           </div>
-          <div className="text-sm font-medium text-center whitespace-nowrap bg-white/80 px-2 py-1 rounded-md backdrop-blur-sm shadow-sm">
+          <div className="text-sm font-medium text-center whitespace-nowrap bg-slate-800/80 text-white px-2 py-1 rounded-md backdrop-blur-sm shadow-sm">
             {data.label}
           </div>
           
           {/* Display zoom-in icon for nodes that can be expanded */}
           {!data.isLeafNode && data.hasUnexpandedSkills && (
-            <div className="absolute top-0 right-0 rounded-full bg-fovy-lightblue p-1 animate-pulse">
-              <ZoomIn className="h-3 w-3 text-fovy-blue" />
+            <div className="absolute top-0 right-0 rounded-full bg-[#2e177b]/40 p-1 animate-pulse">
+              <ZoomIn className="h-3 w-3 text-white" />
             </div>
           )}
         </div>
       </TooltipTrigger>
-      <TooltipContent className="bg-white/90 backdrop-blur-sm">
+      <TooltipContent className="bg-slate-800/90 text-white backdrop-blur-sm">
         {data.hasUnexpandedSkills ? "Click to explore more skills" : data.isLeafNode ? "Skill details" : "Expanded skill"}
       </TooltipContent>
     </Tooltip>
@@ -124,7 +124,7 @@ export const InteractiveMindMap: React.FC<InteractiveMindMapProps> = ({ expanded
 
   // Connection handler
   const onConnect = useCallback(
-    (params: Connection) => setEdges((eds) => addEdge({ ...params, animated: true, style: { stroke: '#0496FF' }, markerEnd: { type: MarkerType.ArrowClosed, color: '#0496FF' } }, eds)),
+    (params: Connection) => setEdges((eds) => addEdge({ ...params, animated: true, style: { stroke: '#2e177b' }, markerEnd: { type: MarkerType.ArrowClosed, color: '#2e177b' } }, eds)),
     [setEdges]
   );
 
@@ -176,10 +176,10 @@ export const InteractiveMindMap: React.FC<InteractiveMindMapProps> = ({ expanded
         source: nodeId,
         target: skill,
         animated: true,
-        style: { stroke: '#0496FF' },
+        style: { stroke: '#2e177b' },
         markerEnd: {
           type: MarkerType.ArrowClosed,
-          color: '#0496FF'
+          color: '#2e177b'
         }
       }));
 
@@ -227,15 +227,15 @@ export const InteractiveMindMap: React.FC<InteractiveMindMapProps> = ({ expanded
   }, [nodes.length, hintShown]);
 
   return (
-    <div className="h-[500px] w-full overflow-hidden rounded-2xl bg-white/60 backdrop-blur-md shadow-sm border border-white/20 relative">
+    <div className="h-[500px] w-full overflow-hidden rounded-2xl bg-slate-900/90 backdrop-blur-md shadow-sm border border-slate-700/50 relative">
       {!hintShown && (
-        <div className="absolute inset-0 bg-black/5 backdrop-blur-sm z-10 flex items-center justify-center rounded-2xl">
-          <div className="bg-white p-4 rounded-xl shadow-lg text-center max-w-xs">
-            <ZoomIn className="h-8 w-8 text-fovy-blue mx-auto mb-2" />
-            <h3 className="text-lg font-semibold mb-1">Explore Your Skills</h3>
-            <p className="text-sm text-gray-600">Click on any node to reveal related skills and expand your career map!</p>
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-10 flex items-center justify-center rounded-2xl">
+          <div className="bg-slate-800 p-4 rounded-xl shadow-lg text-center max-w-xs">
+            <ZoomIn className="h-8 w-8 text-[#2e177b] mx-auto mb-2" />
+            <h3 className="text-lg font-semibold mb-1 text-white">Explore Your Skills</h3>
+            <p className="text-sm text-gray-300">Click on any node to reveal related skills and expand your career map!</p>
             <button 
-              className="mt-3 bg-fovy-blue text-white px-4 py-2 rounded-md text-sm hover:bg-fovy-blue/90 transition-colors"
+              className="mt-3 bg-[#2e177b] text-white px-4 py-2 rounded-md text-sm hover:bg-[#2e177b]/80 transition-colors"
               onClick={() => setHintShown(true)}
             >
               Got it!
@@ -259,12 +259,14 @@ export const InteractiveMindMap: React.FC<InteractiveMindMapProps> = ({ expanded
           panOnScroll
           zoomOnScroll={false}
         >
-          <Background color="#f0f0f0" gap={16} />
-          <Controls />
+          <Background color="#222222" gap={16} />
+          <Controls className="bg-slate-800 border-slate-700 text-white" />
           <MiniMap 
-            nodeStrokeColor={() => '#0496FF'}
-            nodeColor={() => '#0496FF'} 
+            nodeStrokeColor={() => '#2e177b'}
+            nodeColor={() => '#2e177b'} 
             nodeBorderRadius={10}
+            maskColor="rgba(24, 24, 27, 0.6)"
+            className="bg-slate-800/70 border border-slate-700"
           />
         </ReactFlow>
       </TooltipProvider>

@@ -14,7 +14,7 @@ export const MindMap: React.FC = () => {
   };
 
   return (
-    <div className="mind-map-container bg-white rounded-lg overflow-hidden shadow-md border border-gray-100">
+    <div className="mind-map-container bg-slate-900 rounded-lg overflow-hidden shadow-md border border-slate-700/50">
       <InteractiveMindMap 
         expandedNodes={expandedNodes}
         onNodeClick={handleNodeClick}
