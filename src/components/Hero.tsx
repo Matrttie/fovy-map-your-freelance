@@ -31,12 +31,12 @@ export const Hero: React.FC = () => {
 
   return (
     <section className="relative overflow-hidden py-20 md:py-32">
-      {/* Logo in top-left corner */}
-      <div className="absolute top-8 left-8 z-20 w-32 h-24 flex items-center justify-center">
+      {/* Logo moved further into the corner */}
+      <div className="absolute top-4 left-4 z-20">
         <img 
           src="/lovable-uploads/ffc1bc93-8c95-4ffe-beef-a96c26d0eb14.png"
           alt="FOVY Logo"
-          className="w-20 h-20 object-contain"
+          className="w-16 h-16 object-contain"
         />
       </div>
       
