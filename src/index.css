@@ -100,21 +100,21 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/50 backdrop-blur-md border border-white/60 shadow-lg;
+    @apply bg-white/40 backdrop-blur-md border border-white/50 shadow-lg;
   }
   
   .feature-card {
-    @apply relative overflow-hidden rounded-2xl p-6 bg-white/60 backdrop-blur-md border border-white/60 
+    @apply relative overflow-hidden rounded-2xl p-6 bg-white/50 backdrop-blur-md border border-white/50 
            shadow-lg transition-all duration-300 ease-in-out;
   }
   
   .feature-card:hover {
-    @apply shadow-xl transform -translate-y-1 bg-white/80;
+    @apply shadow-xl transform -translate-y-1 bg-white/70;
   }
   
   .gradient-border {
     @apply relative before:absolute before:inset-0 before:p-[1px] before:rounded-2xl before:bg-gradient-to-r 
-           before:from-blue-200 before:via-indigo-300 before:to-blue-200 before:-z-10 before:opacity-0
+           before:from-blue-100 before:via-indigo-200 before:to-blue-100 before:-z-10 before:opacity-0
            hover:before:opacity-100 before:transition-opacity before:duration-500;
   }
   
@@ -163,21 +163,27 @@
   }
   
   .breathing-gradient {
-    background: linear-gradient(-45deg, #d6e0ff, #e6f0ff, #d9e6ff, #f0f5ff);
+    background: linear-gradient(-45deg, #e1eaff, #eef4ff, #e5edff, #f5f9ff);
     background-size: 400% 400%;
     animation: gradient-breathe 15s ease infinite;
   }
   
   .breathing-gradient-enhanced {
-    background: linear-gradient(-45deg, #d6e0ff, #e6f0ff, #d9e6ff, #f0f5ff, #e0edff, #f5f9ff);
+    background: linear-gradient(-45deg, #e1eaff, #eef4ff, #e5edff, #f5f9ff, #e8f1ff, #f8fbff);
     background-size: 400% 400%;
     animation: gradient-breathe 15s ease infinite;
   }
   
   .breathing-gradient-enhanced-vibrant {
-    background: linear-gradient(-45deg, #c7d6ff, #d6e8ff, #cce0ff, #e3efff, #d4e4ff, #eef5ff);
+    background: linear-gradient(-45deg, #d8e4ff, #e3eeff, #dae8ff, #ecf4ff, #e0ecff, #f3f8ff);
     background-size: 400% 400%;
     animation: gradient-breathe 15s ease infinite;
+  }
+  
+  .breathing-gradient-softer {
+    background: linear-gradient(-45deg, #e8f0ff, #f0f6ff, #e9f1ff, #f5faff, #eaf2ff, #f7fbff);
+    background-size: 400% 400%;
+    animation: gradient-breathe 20s ease infinite;
   }
   
   @keyframes gradient-breathe {
@@ -205,86 +211,110 @@
 .stagger-in .stagger-item:nth-child(4) { animation-delay: 0.4s; }
 .stagger-in .stagger-item:nth-child(5) { animation-delay: 0.5s; }
 
-/* New animations with enhanced visuals */
-.breathing-animation {
-  animation: breathing 8s ease-in-out infinite;
+/* New gentler animations with larger movements */
+.gentle-breathing {
+  animation: gentle-breathe 12s ease-in-out infinite;
 }
 
-.breathing-animation-slow {
-  animation: breathing 12s ease-in-out infinite;
+.large-gentle-breathing {
+  animation: large-gentle-breathe 18s ease-in-out infinite;
 }
 
-@keyframes breathing {
+.large-gentle-breathing-slow {
+  animation: large-gentle-breathe 24s ease-in-out infinite;
+}
+
+@keyframes gentle-breathe {
   0%, 100% {
     transform: scale(1);
-    opacity: 0.6;
+    opacity: 0.5;
   }
   50% {
-    transform: scale(1.05);
-    opacity: 0.8;
+    transform: scale(1.03);
+    opacity: 0.7;
   }
 }
 
-.pulse-animation {
-  animation: pulse-glow 3s ease-in-out infinite;
+@keyframes large-gentle-breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.6;
+  }
 }
 
-.pulse-slow {
-  animation: pulse-subtle 5s infinite alternate;
+.gentle-pulse {
+  animation: gentle-pulse 6s ease-in-out infinite;
 }
 
-@keyframes pulse-subtle {
+@keyframes gentle-pulse {
   0% {
-    box-shadow: 0 0 8px rgba(4, 150, 255, 0.2);
+    box-shadow: 0 0 8px rgba(4, 150, 255, 0.1);
     transform: scale(1);
   }
-  100% {
-    box-shadow: 0 0 20px rgba(4, 150, 255, 0.4);
+  50% {
+    box-shadow: 0 0 16px rgba(4, 150, 255, 0.2);
     transform: scale(1.02);
+  }
+  100% {
+    box-shadow: 0 0 8px rgba(4, 150, 255, 0.1);
+    transform: scale(1);
   }
 }
 
-.floating-element {
-  animation: float 6s ease-in-out infinite;
+.large-gentle-float {
+  animation: large-gentle-float 12s ease-in-out infinite;
 }
 
-.floating-element-reverse {
-  animation: float-reverse 8s ease-in-out infinite;
+.large-gentle-float-reverse {
+  animation: large-gentle-float-reverse 15s ease-in-out infinite;
 }
 
-.floating-element-slow {
-  animation: float 10s ease-in-out infinite;
+.large-gentle-float-slow {
+  animation: large-gentle-float 20s ease-in-out infinite;
 }
 
-.floating-dot {
-  animation: float-micro 4s ease-in-out infinite;
-}
-
-.floating-dot-slow {
-  animation: float-micro 6s ease-in-out infinite;
-}
-
-@keyframes float-reverse {
+@keyframes large-gentle-float {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(12px);
+    transform: translateY(20px);
   }
 }
 
-@keyframes float-micro {
+@keyframes large-gentle-float-reverse {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.gentle-float {
+  animation: gentle-float 8s ease-in-out infinite;
+}
+
+.gentle-float-slow {
+  animation: gentle-float 12s ease-in-out infinite;
+}
+
+@keyframes gentle-float {
   0%, 100% {
     transform: translate(0, 0);
   }
   25% {
-    transform: translate(3px, -3px);
+    transform: translate(5px, -5px);
   }
   50% {
-    transform: translate(0, -5px);
+    transform: translate(0, -8px);
   }
   75% {
-    transform: translate(-3px, -3px);
+    transform: translate(-5px, -5px);
   }
 }
 
