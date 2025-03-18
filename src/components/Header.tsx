@@ -53,7 +53,7 @@ export const Header: React.FC = () => {
             href="#mind-map"
             onClick={(e) => handleNavClick(e, 'mind-map')}
           >
-            Mind Mapping
+            Career Mapping
           </a>
           <a 
             className="nav-link" 
@@ -102,7 +102,7 @@ export const Header: React.FC = () => {
               href="#mind-map"
               onClick={(e) => handleNavClick(e, 'mind-map')}
             >
-              Mind Mapping
+              Career Mapping
             </a>
             <a
               className="flex items-center py-2 text-muted-foreground hover:text-foreground"

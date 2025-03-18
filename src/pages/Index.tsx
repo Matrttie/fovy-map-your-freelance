@@ -131,13 +131,13 @@ const Index = () => {
             <div className="order-1 lg:order-2">
               <div className="inline-flex items-center rounded-lg bg-fovy-lightblue px-3 py-1 text-sm font-medium text-fovy-blue stagger-item animate-fade-in">
                 <Brain className="mr-1 h-3.5 w-3.5" />
-                <span>AI Mind Mapping</span>
+                <span>Career Mapping</span>
               </div>
               <h2 className="heading-md mt-4 stagger-item animate-fade-in">
                 Visualize your career like <span className="text-fovy-blue">never before</span>
               </h2>
               <p className="mt-4 text-muted-foreground stagger-item animate-fade-in">
-                Our AI-powered mind mapping technology creates visual representations of your skills, experience, and achievements. Watch as your career landscape unfolds before you.
+                Our AI-powered career mapping technology creates visual representations of your skills, experience, and achievements. Watch as your career landscape unfolds before you.
               </p>
               
               <ul className="mt-6 space-y-3 stagger-item animate-fade-in">
@@ -157,7 +157,7 @@ const Index = () => {
               
               <div className="mt-8 stagger-item animate-fade-in">
                 <Button className="bg-fovy-blue hover:bg-fovy-blue/90">
-                  Create Your Mind Map
+                  Create Your Career Map
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
