@@ -113,6 +113,12 @@
     @apply shadow-xl transform -translate-y-1 bg-white/60;
   }
   
+  .gradient-border {
+    @apply relative before:absolute before:inset-0 before:p-[1px] before:rounded-2xl before:bg-gradient-to-r 
+           before:from-blue-100/80 before:via-indigo-200/50 before:to-blue-100/80 before:-z-10 before:opacity-0
+           hover:before:opacity-100 before:transition-opacity before:duration-500;
+  }
+  
   .nav-link {
     @apply relative text-sm font-medium text-slate-600 transition-colors hover:text-slate-900 
            after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-blue-500 
@@ -163,6 +169,12 @@
     animation: gradient-breathe 15s ease infinite;
   }
   
+  .breathing-gradient-enhanced {
+    background: linear-gradient(-45deg, #e0e5ff, #edf4ff, #e5edff, #f5f8ff, #e8f0ff, #ffffff);
+    background-size: 400% 400%;
+    animation: gradient-breathe 15s ease infinite;
+  }
+  
   @keyframes gradient-breathe {
     0% {
       background-position: 0% 50%;
@@ -187,6 +199,89 @@
 .stagger-in .stagger-item:nth-child(3) { animation-delay: 0.3s; }
 .stagger-in .stagger-item:nth-child(4) { animation-delay: 0.4s; }
 .stagger-in .stagger-item:nth-child(5) { animation-delay: 0.5s; }
+
+/* New animations */
+.breathing-animation {
+  animation: breathing 8s ease-in-out infinite;
+}
+
+.breathing-animation-slow {
+  animation: breathing 12s ease-in-out infinite;
+}
+
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+}
+
+.pulse-animation {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.pulse-slow {
+  animation: pulse-subtle 5s infinite alternate;
+}
+
+@keyframes pulse-subtle {
+  0% {
+    box-shadow: 0 0 5px rgba(4, 150, 255, 0.1);
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(4, 150, 255, 0.3);
+    transform: scale(1.02);
+  }
+}
+
+.floating-element {
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-element-reverse {
+  animation: float-reverse 8s ease-in-out infinite;
+}
+
+.floating-element-slow {
+  animation: float 10s ease-in-out infinite;
+}
+
+.floating-dot {
+  animation: float-micro 4s ease-in-out infinite;
+}
+
+.floating-dot-slow {
+  animation: float-micro 6s ease-in-out infinite;
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes float-micro {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(2px, -2px);
+  }
+  50% {
+    transform: translate(0, -4px);
+  }
+  75% {
+    transform: translate(-2px, -2px);
+  }
+}
 
 /* Mind map styles */
 .mind-map-container {
@@ -331,15 +426,22 @@
   @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
 }
 
-.floating-element {
-  animation: float 6s ease-in-out infinite;
+/* Gradient button effect */
+.btn-gradient {
+  @apply relative overflow-hidden;
+  background: linear-gradient(90deg, #0496FF, #5466ff, #0496FF);
+  background-size: 200% 100%;
+  animation: gradient-shift 8s ease infinite;
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
   }
   50% {
-    transform: translateY(-10px);
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

@@ -21,23 +21,23 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
   return (
     <div 
       className={cn(
-        "feature-card stagger-item animate-fade-in glass-card-hover", 
+        "feature-card stagger-item animate-fade-in glass-card-hover gradient-border", 
         className
       )}
       style={{ animationDelay: `${delay}ms` }}
     >
       <div className="relative z-10">
-        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100/60 backdrop-blur-sm border border-blue-100/80 shadow-sm">
+        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-blue-100/80 to-indigo-100/60 backdrop-blur-sm border border-blue-100/80 shadow-sm pulse-slow">
           <Icon className="h-6 w-6 text-blue-500" />
         </div>
         <h3 className="mb-2 text-xl font-semibold text-slate-800">{title}</h3>
         <p className="text-slate-600">{description}</p>
       </div>
       
-      {/* Decorative elements */}
-      <div className="absolute -bottom-3 -right-3 w-10 h-10 rounded-full bg-blue-50/60 backdrop-blur-sm border border-white/40"></div>
-      <div className="absolute top-1/2 right-4 w-2 h-2 rounded-full bg-blue-200/60"></div>
-      <div className="absolute bottom-1/4 left-4 w-3 h-3 rounded-full bg-indigo-200/60"></div>
+      {/* Enhanced decorative elements */}
+      <div className="absolute -bottom-3 -right-3 w-10 h-10 rounded-full bg-gradient-to-br from-blue-50/60 to-indigo-50/40 backdrop-blur-sm border border-white/40 pulse-animation"></div>
+      <div className="absolute top-1/2 right-4 w-2 h-2 rounded-full bg-blue-200/60 floating-dot"></div>
+      <div className="absolute bottom-1/4 left-4 w-3 h-3 rounded-full bg-indigo-200/60 floating-dot-slow"></div>
     </div>
   );
 };
