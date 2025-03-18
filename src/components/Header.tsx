@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -45,10 +44,10 @@ export const Header: React.FC = () => {
           </a>
         </nav>
         <div className="hidden md:flex items-center gap-4">
-          <Button variant="outline" size="sm" className="h-9">
+          <Button variant="outline" size="sm" className="h-9 rounded-md">
             Sign In
           </Button>
-          <Button size="sm" className="h-9 bg-fovy-blue hover:bg-fovy-blue/90">
+          <Button size="sm" className="h-9 bg-blue-500 hover:bg-blue-600 rounded-md">
             Get Started
           </Button>
         </div>
@@ -96,7 +95,7 @@ export const Header: React.FC = () => {
               <Button variant="outline" className="w-full">
                 Sign In
               </Button>
-              <Button className="w-full bg-fovy-blue hover:bg-fovy-blue/90">
+              <Button className="w-full bg-blue-500 hover:bg-blue-600">
                 Get Started
               </Button>
             </div>
