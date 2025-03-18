@@ -70,10 +70,10 @@ const Index = () => {
               <Sparkles className="mr-1 h-3.5 w-3.5" />
               <span>Core Features</span>
             </div>
-            <h2 className="heading-lg mt-4 stagger-item animate-fade-in">
+            <h2 className="heading-lg mt-4 stagger-item animate-fade-in text-white">
               All the tools you need to <span className="text-fovy-blue">succeed</span>
             </h2>
-            <p className="mt-4 text-muted-foreground mx-auto max-w-[700px] stagger-item animate-fade-in">
+            <p className="mt-4 text-white mx-auto max-w-[700px] stagger-item animate-fade-in">
               FOVY provides freelancers with a complete suite of <span className="text-fovy-blue">AI-powered tools</span> designed to enhance career visibility, improve client communications, and boost confidence.
             </p>
           </div>
@@ -133,14 +133,14 @@ const Index = () => {
                 <Brain className="mr-1 h-3.5 w-3.5" />
                 <span>Career Mapping</span>
               </div>
-              <h2 className="heading-md mt-4 stagger-item animate-fade-in">
+              <h2 className="heading-md mt-4 stagger-item animate-fade-in text-white">
                 Visualize your career like <span className="text-fovy-blue">never before</span>
               </h2>
-              <p className="mt-4 text-muted-foreground stagger-item animate-fade-in">
+              <p className="mt-4 text-white stagger-item animate-fade-in">
                 Our <span className="text-fovy-blue">AI-powered</span> career mapping technology creates visual representations of your skills, experience, and achievements. Watch as your career landscape unfolds before you.
               </p>
               
-              <ul className="mt-6 space-y-3 stagger-item animate-fade-in">
+              <ul className="mt-6 space-y-3 stagger-item animate-fade-in text-white">
                 <li className="flex items-center gap-2">
                   <BadgeCheck className="h-5 w-5 text-fovy-blue flex-shrink-0" />
                   <span>Automatically organize skills by category and proficiency</span>
@@ -175,14 +175,14 @@ const Index = () => {
                 <Sparkles className="mr-1 h-3.5 w-3.5" />
                 <span>AIR Minder</span>
               </div>
-              <h2 className="heading-md mt-4 stagger-item animate-fade-in">
+              <h2 className="heading-md mt-4 stagger-item animate-fade-in text-white">
                 Your personal confidence <span className="text-fovy-blue">companion</span>
               </h2>
-              <p className="mt-4 text-muted-foreground stagger-item animate-fade-in">
+              <p className="mt-4 text-white stagger-item animate-fade-in">
                 AIR Minder provides gentle, <span className="text-fovy-blue">personalized reminders</span> and motivational insights to help you build confidence, reduce stress, and stay focused on your goals.
               </p>
               
-              <ul className="mt-6 space-y-3 stagger-item animate-fade-in">
+              <ul className="mt-6 space-y-3 stagger-item animate-fade-in text-white">
                 <li className="flex items-center gap-2">
                   <BadgeCheck className="h-5 w-5 text-fovy-blue flex-shrink-0" />
                   <span>Receive timely reminders of your past successes</span>
@@ -221,22 +221,22 @@ const Index = () => {
               <TrendingUp className="mr-1 h-3.5 w-3.5" />
               <span>Smart Matching</span>
             </div>
-            <h2 className="heading-lg mt-4 stagger-item animate-fade-in">
+            <h2 className="heading-lg mt-4 stagger-item animate-fade-in text-white">
               Make data-driven <span className="text-fovy-blue">career decisions</span>
             </h2>
-            <p className="mt-4 text-muted-foreground mx-auto max-w-[700px] stagger-item animate-fade-in">
+            <p className="mt-4 text-white mx-auto max-w-[700px] stagger-item animate-fade-in">
               FOVY analyzes your skills and market trends to provide <span className="text-fovy-blue">personalized recommendations</span> for your career growth, learning paths, and new opportunities.
             </p>
           </div>
           
-          <div className="relative mx-auto max-w-4xl rounded-2xl glass-card p-8 stagger-item animate-scale-in">
+          <div className="relative mx-auto max-w-4xl rounded-2xl glass-card-dark p-8 stagger-item animate-scale-in">
             <div className="grid gap-8 md:grid-cols-3">
               <div className="text-center">
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-fovy-lightblue">
                   <Lightbulb className="h-8 w-8 text-fovy-blue" />
                 </div>
-                <h3 className="text-lg font-medium">Learning Paths</h3>
-                <p className="mt-2 text-sm text-muted-foreground">
+                <h3 className="text-lg font-medium text-white">Learning Paths</h3>
+                <p className="mt-2 text-sm text-white">
                   Personalized recommendations for courses and certifications based on your career goals.
                 </p>
               </div>
@@ -244,8 +244,8 @@ const Index = () => {
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-fovy-lightblue">
                   <TrendingUp className="h-8 w-8 text-fovy-blue" />
                 </div>
-                <h3 className="text-lg font-medium">Market Trends</h3>
-                <p className="mt-2 text-sm text-muted-foreground">
+                <h3 className="text-lg font-medium text-white">Market Trends</h3>
+                <p className="mt-2 text-sm text-white">
                   Real-time insights on high-demand skills and industry movements to keep you ahead.
                 </p>
               </div>
@@ -253,8 +253,8 @@ const Index = () => {
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-fovy-lightblue">
                   <Globe className="h-8 w-8 text-fovy-blue" />
                 </div>
-                <h3 className="text-lg font-medium">Opportunities</h3>
-                <p className="mt-2 text-sm text-muted-foreground">
+                <h3 className="text-lg font-medium text-white">Opportunities</h3>
+                <p className="mt-2 text-sm text-white">
                   Discover projects and clients that align with your skills, experience, and career goals.
                 </p>
               </div>
@@ -274,14 +274,14 @@ const Index = () => {
       <section className="section bg-fovy-blue text-white">
         <div className="container-tight text-center">
           <h2 className="heading-lg animate-fade-in">Ready to transform your freelance career?</h2>
-          <p className="mt-4 text-white/80 mx-auto max-w-[700px] animate-fade-in">
+          <p className="mt-4 text-white mx-auto max-w-[700px] animate-fade-in">
             Join thousands of freelancers who are mapping their careers, improving client communications, and building confidence with FOVY.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-            <Button className="bg-white text-fovy-blue hover:bg-white/90">
+            <Button className="bg-white text-fovy-blue hover:bg-white/90 font-semibold">
               Get Started for Free
             </Button>
-            <Button variant="outline" className="text-white border-white hover:bg-white/10">
+            <Button variant="outline" className="text-white border-white hover:bg-white/10 font-semibold">
               Schedule a Demo
             </Button>
           </div>

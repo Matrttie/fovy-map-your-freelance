@@ -51,7 +51,7 @@ export const Hero: React.FC = () => {
               <h1 className="stagger-item animate-fade-in mt-4 text-5xl font-bold leading-tight md:text-6xl lg:text-7xl text-white">
                 <span className="text-blue-400">Map</span> your career with <span className="text-blue-400">AI</span>
               </h1>
-              <p className="stagger-item animate-fade-in mt-4 max-w-[600px] text-lg text-slate-300">
+              <p className="stagger-item animate-fade-in mt-4 max-w-[600px] text-lg text-white">
                 FOVY helps freelancers visualize skills, enhance client communication, and build career confidence through AI-driven career mapping.
               </p>
             </div>
@@ -60,7 +60,7 @@ export const Hero: React.FC = () => {
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" className="bg-slate-800/80 backdrop-blur-sm border border-slate-700 h-12 px-6 rounded-xl text-slate-300 shadow-md hover:bg-slate-700/80">
+              <Button variant="outline" className="bg-slate-800/80 backdrop-blur-sm border border-slate-700 h-12 px-6 rounded-xl text-white shadow-md hover:bg-slate-700/80">
                 How It Works
               </Button>
             </div>
@@ -69,19 +69,19 @@ export const Hero: React.FC = () => {
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-slate-800/80 to-slate-900/70 backdrop-blur-sm shadow-md">
                   <Brain className="h-5 w-5 text-blue-400" />
                 </div>
-                <div className="text-sm text-slate-300">AI Mind Mapping</div>
+                <div className="text-sm text-white">AI Mind Mapping</div>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-slate-800/80 to-slate-900/70 backdrop-blur-sm shadow-md">
                   <MessageSquare className="h-5 w-5 text-blue-400" />
                 </div>
-                <div className="text-sm text-slate-300">Client Communication</div>
+                <div className="text-sm text-white">Client Communication</div>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-slate-800/80 to-slate-900/70 backdrop-blur-sm shadow-md">
                   <Sparkles className="h-5 w-5 text-blue-400" />
                 </div>
-                <div className="text-sm text-slate-300">Confidence Building</div>
+                <div className="text-sm text-white">Confidence Building</div>
               </div>
             </div>
           </div>
