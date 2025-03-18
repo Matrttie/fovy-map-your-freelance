@@ -10,16 +10,16 @@ interface MainLayoutProps {
 export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   // Apply styles when layout mounts
   useEffect(() => {
-    // Add dark background for the overall app
-    document.body.classList.add('bg-[#0a1c6b]');
+    // Add light background for the overall app
+    document.body.classList.add('bg-white');
     
     return () => {
-      document.body.classList.remove('bg-[#0a1c6b]');
+      document.body.classList.remove('bg-white');
     };
   }, []);
   
   return (
-    <div className="flex min-h-screen flex-col bg-gradient-to-br from-[#0a1c6b] to-[#0e2380] text-white">
+    <div className="flex min-h-screen flex-col bg-white text-gray-800">
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />
