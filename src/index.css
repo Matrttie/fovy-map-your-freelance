@@ -533,12 +533,12 @@
 }
 
 .chat-bubble.user {
-  @apply ml-auto bg-blue-500 text-white;
+  @apply ml-auto bg-blue-600 text-white;
   border-bottom-right-radius: 0;
 }
 
 .chat-bubble.ai {
-  @apply mr-auto bg-white/70 backdrop-blur-sm text-slate-800 border border-white/40;
+  @apply mr-auto bg-slate-800 text-white border border-slate-700/50;
   border-bottom-left-radius: 0;
 }
 

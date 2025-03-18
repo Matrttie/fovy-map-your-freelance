@@ -93,21 +93,21 @@ export const AIChat: React.FC = () => {
   return (
     <div 
       ref={containerRef} 
-      className={`relative overflow-hidden rounded-2xl glass-card h-[500px] flex flex-col ${
+      className={`relative overflow-hidden rounded-2xl glass-card-dark h-[500px] flex flex-col ${
         isVisible ? 'animate-scale-in' : 'opacity-0'
       }`}
     >
-      <div className="flex items-center border-b p-4">
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-fovy-lightblue">
-          <Bot className="h-5 w-5 text-fovy-blue" />
+      <div className="flex items-center border-b border-slate-700/50 p-4 bg-slate-800/80">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-900/30">
+          <Bot className="h-5 w-5 text-blue-400" />
         </div>
         <div className="ml-3">
-          <p className="text-sm font-medium">AIR Minder</p>
-          <p className="text-xs text-muted-foreground">Self-Efficacy & Confidence Assistant</p>
+          <p className="text-sm font-medium text-white">AIR Minder</p>
+          <p className="text-xs text-gray-300">Self-Efficacy & Confidence Assistant</p>
         </div>
       </div>
       
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-900/50">
         {messages.map((message, index) => (
           <div
             key={message.id}
@@ -116,18 +116,18 @@ export const AIChat: React.FC = () => {
           >
             <div className="flex items-start gap-2">
               {message.sender === 'ai' ? (
-                <Bot className="h-5 w-5 mt-1 flex-shrink-0" />
+                <Bot className="h-5 w-5 mt-1 flex-shrink-0 text-blue-400" />
               ) : (
-                <User className="h-5 w-5 mt-1 flex-shrink-0" />
+                <User className="h-5 w-5 mt-1 flex-shrink-0 text-white" />
               )}
-              <p>{message.content}</p>
+              <p className={message.sender === 'ai' ? 'text-slate-200' : 'text-white'}>{message.content}</p>
             </div>
           </div>
         ))}
         <div ref={endOfMessagesRef} />
       </div>
       
-      <div className="border-t p-4">
+      <div className="border-t border-slate-700/50 p-4 bg-slate-800/80">
         <div className="flex gap-2">
           <Input
             placeholder="Write a message..."
@@ -138,11 +138,11 @@ export const AIChat: React.FC = () => {
                 handleSendMessage();
               }
             }}
-            className="flex-1"
+            className="flex-1 bg-slate-700/50 border-slate-600 text-white placeholder:text-gray-400"
           />
           <Button 
             onClick={handleSendMessage}
-            className="bg-fovy-blue hover:bg-fovy-blue/90"
+            className="bg-blue-600 hover:bg-blue-700"
           >
             <Send className="h-4 w-4" />
             <span className="sr-only">Send</span>

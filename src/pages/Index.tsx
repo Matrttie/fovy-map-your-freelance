@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { MainLayout } from '@/layouts/MainLayout';
 import { Hero } from '@/components/Hero';
@@ -24,7 +23,6 @@ const Index = () => {
   const insightsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Prevent default hash link behavior if present
     if (window.location.hash) {
       window.history.replaceState(null, '', window.location.pathname);
       window.scrollTo(0, 0);
@@ -63,7 +61,7 @@ const Index = () => {
       <Hero />
       
       {/* Features Section */}
-      <section id="features" className="section bg-fovy-gray">
+      <section id="features" className="section bg-fovy-dark">
         <div className="container-tight" ref={featuresRef}>
           <div className="text-center mb-16">
             <div className="inline-flex items-center rounded-lg bg-fovy-lightblue px-3 py-1 text-sm font-medium text-fovy-blue stagger-item animate-fade-in">
@@ -167,38 +165,38 @@ const Index = () => {
       </section>
       
       {/* AIR Minder Section */}
-      <section id="air-minder" className="section bg-fovy-gray">
+      <section id="air-minder" className="section bg-[#1A1F2C]">
         <div className="container-tight" ref={airMinderRef}>
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <div>
-              <div className="inline-flex items-center rounded-lg bg-fovy-lightblue px-3 py-1 text-sm font-medium text-fovy-blue stagger-item animate-fade-in">
+              <div className="inline-flex items-center rounded-lg bg-blue-900/30 px-3 py-1 text-sm font-medium text-blue-400 stagger-item animate-fade-in">
                 <Sparkles className="mr-1 h-3.5 w-3.5" />
                 <span>AIR Minder</span>
               </div>
               <h2 className="heading-md mt-4 stagger-item animate-fade-in text-white">
-                Your personal confidence <span className="text-fovy-blue">companion</span>
+                Your personal confidence <span className="text-blue-400">companion</span>
               </h2>
-              <p className="mt-4 text-white stagger-item animate-fade-in">
-                AIR Minder provides gentle, <span className="text-fovy-blue">personalized reminders</span> and motivational insights to help you build confidence, reduce stress, and stay focused on your goals.
+              <p className="mt-4 text-gray-200 stagger-item animate-fade-in">
+                AIR Minder provides gentle, <span className="text-blue-400">personalized reminders</span> and motivational insights to help you build confidence, reduce stress, and stay focused on your goals.
               </p>
               
-              <ul className="mt-6 space-y-3 stagger-item animate-fade-in text-white">
+              <ul className="mt-6 space-y-3 stagger-item animate-fade-in text-gray-200">
                 <li className="flex items-center gap-2">
-                  <BadgeCheck className="h-5 w-5 text-fovy-blue flex-shrink-0" />
+                  <BadgeCheck className="h-5 w-5 text-blue-400 flex-shrink-0" />
                   <span>Receive timely reminders of your past successes</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <BadgeCheck className="h-5 w-5 text-fovy-blue flex-shrink-0" />
+                  <BadgeCheck className="h-5 w-5 text-blue-400 flex-shrink-0" />
                   <span>Get personalized motivation when facing challenges</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <BadgeCheck className="h-5 w-5 text-fovy-blue flex-shrink-0" />
+                  <BadgeCheck className="h-5 w-5 text-blue-400 flex-shrink-0" />
                   <span>Develop resilience and positive self-talk habits</span>
                 </li>
               </ul>
               
               <div className="mt-8 stagger-item animate-fade-in">
-                <Button className="bg-fovy-blue hover:bg-fovy-blue/90">
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white">
                   Try AIR Minder
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -271,7 +269,7 @@ const Index = () => {
       </section>
       
       {/* CTA Section */}
-      <section className="section bg-fovy-blue text-white">
+      <section className="section bg-blue-700 text-white">
         <div className="container-tight text-center">
           <h2 className="heading-lg animate-fade-in">Ready to transform your freelance career?</h2>
           <p className="mt-4 text-white mx-auto max-w-[700px] animate-fade-in">
