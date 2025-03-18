@@ -49,7 +49,7 @@ export const Hero: React.FC = () => {
                 <span>AI-Powered Career Growth</span>
               </div>
               <h1 className="stagger-item animate-fade-in mt-4 text-5xl font-bold leading-tight md:text-6xl lg:text-7xl text-slate-800">
-                <span className="text-fovy-blue">Map</span> your career<br />with <span className="text-fovy-blue">AI</span>
+                <span className="text-fovy-blue">Map</span> your career with <span className="text-fovy-blue">AI</span>
               </h1>
               <p className="stagger-item animate-fade-in mt-4 max-w-[600px] text-lg text-slate-600">
                 FOVY helps freelancers visualize skills, enhance client communication, and build career confidence through AI-driven career mapping.

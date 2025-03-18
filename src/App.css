@@ -1,3 +1,4 @@
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +40,47 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.btn-gradient {
+  background: linear-gradient(45deg, #0496FF, #536DFE);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(83, 109, 254, 0.4);
+}
+
+.stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.stagger-in .stagger-item {
+  animation: stagger-fade-in 0.8s ease forwards;
+}
+
+.stagger-in .stagger-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.stagger-in .stagger-item:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.stagger-in .stagger-item:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.stagger-in .stagger-item:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+@keyframes stagger-fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
