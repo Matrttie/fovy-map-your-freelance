@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -15,6 +16,16 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      // Close mobile menu if open
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   return (
     <header
       className={`sticky top-0 z-40 w-full transition-all duration-300 ${
@@ -30,16 +41,32 @@ export const Header: React.FC = () => {
           </a>
         </div>
         <nav className="hidden md:flex items-center gap-6">
-          <a className="nav-link" href="#features">
+          <a 
+            className="nav-link" 
+            href="#features"
+            onClick={(e) => handleNavClick(e, 'features')}
+          >
             Features
           </a>
-          <a className="nav-link" href="#mind-map">
+          <a 
+            className="nav-link" 
+            href="#mind-map"
+            onClick={(e) => handleNavClick(e, 'mind-map')}
+          >
             Mind Mapping
           </a>
-          <a className="nav-link" href="#air-minder">
+          <a 
+            className="nav-link" 
+            href="#air-minder"
+            onClick={(e) => handleNavClick(e, 'air-minder')}
+          >
             AIR Minder
           </a>
-          <a className="nav-link" href="#career-insights">
+          <a 
+            className="nav-link" 
+            href="#career-insights"
+            onClick={(e) => handleNavClick(e, 'career-insights')}
+          >
             Career Insights
           </a>
         </nav>
@@ -66,28 +93,28 @@ export const Header: React.FC = () => {
             <a
               className="flex items-center py-2 text-muted-foreground hover:text-foreground"
               href="#features"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={(e) => handleNavClick(e, 'features')}
             >
               Features
             </a>
             <a
               className="flex items-center py-2 text-muted-foreground hover:text-foreground"
               href="#mind-map"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={(e) => handleNavClick(e, 'mind-map')}
             >
               Mind Mapping
             </a>
             <a
               className="flex items-center py-2 text-muted-foreground hover:text-foreground"
               href="#air-minder"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={(e) => handleNavClick(e, 'air-minder')}
             >
               AIR Minder
             </a>
             <a
               className="flex items-center py-2 text-muted-foreground hover:text-foreground"
               href="#career-insights"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={(e) => handleNavClick(e, 'career-insights')}
             >
               Career Insights
             </a>

@@ -24,6 +24,12 @@ const Index = () => {
   const insightsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Prevent default hash link behavior if present
+    if (window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname);
+      window.scrollTo(0, 0);
+    }
+
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -100px 0px',

@@ -13,6 +13,9 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     // Add light background for the overall app
     document.body.classList.add('bg-white');
     
+    // Reset scroll position to top on page load
+    window.scrollTo(0, 0);
+    
     return () => {
       document.body.classList.remove('bg-white');
     };
