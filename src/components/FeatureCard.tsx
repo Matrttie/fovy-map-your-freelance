@@ -21,17 +21,17 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
   return (
     <div 
       className={cn(
-        "feature-card stagger-item animate-fade-in glass-card-hover gradient-border p-6 rounded-xl bg-white/90 backdrop-blur-sm border border-slate-100 shadow-md", 
+        "feature-card stagger-item animate-fade-in glass-card-dark p-8 rounded-xl border border-slate-800/50 hover:border-blue-500/30 transition-all duration-300", 
         className
       )}
       style={{ animationDelay: `${delay}ms` }}
     >
       <div className="relative z-10">
-        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-blue-200/80 to-indigo-100/70 backdrop-blur-sm border border-blue-100 shadow-md">
-          <Icon className="h-6 w-6 text-blue-500" />
+        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-blue-500/10 border border-blue-500/20">
+          <Icon className="h-7 w-7 text-blue-400" />
         </div>
-        <h3 className="mb-2 text-xl font-semibold text-slate-800">{title}</h3>
-        <p className="text-slate-600">{description}</p>
+        <h3 className="mb-3 text-xl font-semibold text-white">{title}</h3>
+        <p className="text-slate-300">{description}</p>
       </div>
     </div>
   );
